@@ -21,11 +21,13 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="page__top top">
-				<div class="top__container">
-					<div class="top__line"></div>
-				</div>
-
+			<section id="line" class="page__top top">
+					<div class="top__container">
+						<div class="top__progressbar">
+							<div class="top__line"></div>
+							<span id="progressBar" class="top__loading"></span>
+						</div>
+					</div>
 			</section>
 			<section class="page__main main-block active">
 				<div class="main-block__container">
@@ -37,7 +39,7 @@
 						<span class="main-block__cost">€99</span>
 					</div>
 					<form action="#" class="main-block__form form-block">
-						<input type="text" placeholder="Code-Promo" class="form-block__input input input--code">
+						<input id="Code-Promo" type="text" oninput="syncInputs()" placeholder="Code-Promo" class="form-block__input input input--code">
 						<a href="#" class="form-block__apply">Appliquer</a>
 					</form>
 					<div class="main-block__text-block text-block">
@@ -75,15 +77,15 @@
 					<h2 class="info__title">Leurs informations</h2>
 					<form action="#" class="info__form form form--info">
 						<label for="surname" class="form--info__title">Prénom</label>
-						<input class="form--info__input" type="text" name="surname" placeholder="Prénom">
+						<input id="surname" class="form--info__input" type="text" name="surname" placeholder="Prénom">
 
 						<label for="name" class="form--info__title">Nom</label>
-						<input class="form--info__input" type="text" name="name" placeholder="Nom">
+						<input id="name" class="form--info__input" type="text" name="name" placeholder="Nom">
 
 						<label for="email" class="form--info__title">Addresse mail</label>
-						<input class="form--info__input" type="email" name="email" placeholder="Addresse mail">
+						<input id="email" class="form--info__input" type="email" name="email" placeholder="Addresse mail">
 
-						<button class="form--info__button button" onclick="recall()">Continuer</button>
+						<button class="form--info__button button" onclick="checkForm()">Continuer</button>
 					</form>
 				</div>
 			</section>
@@ -92,12 +94,12 @@
 					<h2 class="info__title">Leurs informations</h2>
 					<form action="#" method="post" class="info__form form form--info">
 						<label for="surname" class="form--info__title">Prénom</label>
-						<input class="form--info__input" type="text" name="surname" placeholder="Prénom">
+						<input id="surname1" class="form--info__input" type="text" name="surname" placeholder="Prénom">
 
 						<label for="name" class="form--info__title">Nom</label>
-						<input class="form--info__input" type="text" name="name" placeholder="Nom">
+						<input id="name1" class="form--info__input" type="text" name="name" placeholder="Nom">
 
-						<button class="form--info__button button" onclick="next()">Continuer</button>
+						<button class="form--info__button button" onclick="checkForm()">Continuer</button>
 					</form>
 				</div>
 			</section>
@@ -240,7 +242,7 @@
 							</ul>
 						</div>
 						<form action="#" class="main-block__form form-block">
-							<input type="text" placeholder="Code-Promo" class="form-block__input input input--code">
+							<input id="input-2" type="text" placeholder="Code-Promo" class="form-block__input input input--code">
 							<a href="#" class="form-block__apply">Appliquer</a>
 						</form>
 					</div>
