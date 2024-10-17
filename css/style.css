@@ -1160,3 +1160,122 @@ h6 {
 	height: 16px;
 	background-color: #367243;
 }
+/* 
+@media (max-width: 468px) {
+	.top__progressbar {
+		padding-right: 320px;
+	}
+	.top__line {
+		width: 320px;
+	}
+} */
+
+@media (min-width: 20em) and (max-width: 91.5em) {
+	@supports (font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem)) {
+		.form--select__title {
+			font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem);
+		}
+	}
+
+	@supports not (font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem)) {
+		.form--select__title {
+			font-size: calc(1.5rem + 1 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem)) {
+		.title {
+			font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem);
+		}
+	}
+
+	@supports not (font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem)) {
+		.title {
+			font-size: calc(1.5rem + 1 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (font-size: clamp(1.5rem, 1.3951048951rem + 0.5244755245vw, 1.875rem)) {
+		.send-to .form--select__title {
+			font-size: clamp(1.5rem, 1.3951048951rem + 0.5244755245vw, 1.875rem);
+		}
+	}
+
+	@supports not (font-size: clamp(1.5rem, 1.3951048951rem + 0.5244755245vw, 1.875rem)) {
+		.send-to .form--select__title {
+			font-size: calc(1.5rem + 0.375 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem)) {
+		.info__title {
+			font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem);
+		}
+	}
+
+	@supports not (font-size: clamp(1.5rem, 1.2202797203rem + 1.3986013986vw, 2.5rem)) {
+		.info__title {
+			font-size: calc(1.5rem + 1 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (padding-left: clamp(1.3125rem, 0.6131993007rem + 3.4965034965vw, 3.8125rem)) {
+		.payment__code {
+			padding-left: clamp(1.3125rem, 0.6131993007rem + 3.4965034965vw, 3.8125rem);
+		}
+	}
+
+	@supports not (padding-left: clamp(1.3125rem, 0.6131993007rem + 3.4965034965vw, 3.8125rem)) {
+		.payment__code {
+			padding-left: calc(1.3125rem + 2.5 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (padding-right: clamp(1.25rem, 0.5332167832rem + 3.5839160839vw, 3.8125rem)) {
+		.payment__code {
+			padding-right: clamp(1.25rem, 0.5332167832rem + 3.5839160839vw, 3.8125rem);
+		}
+	}
+
+	@supports not (padding-right: clamp(1.25rem, 0.5332167832rem + 3.5839160839vw, 3.8125rem)) {
+		.payment__code {
+			padding-right: calc(1.25rem + 2.5625 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (font-size: clamp(1.5rem, 1.2902097902rem + 1.048951049vw, 2.25rem)) {
+		.form__title {
+			font-size: clamp(1.5rem, 1.2902097902rem + 1.048951049vw, 2.25rem);
+		}
+	}
+
+	@supports not (font-size: clamp(1.5rem, 1.2902097902rem + 1.048951049vw, 2.25rem)) {
+		.form__title {
+			font-size: calc(1.5rem + 0.75 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (padding-right: clamp(19.75rem, 17.756993007rem + 9.965034965vw, 26.875rem)) {
+		.top__progressbar {
+			padding-right: clamp(19.75rem, 17.756993007rem + 9.965034965vw, 26.875rem);
+		}
+	}
+
+	@supports not (padding-right: clamp(19.75rem, 17.756993007rem + 9.965034965vw, 26.875rem)) {
+		.top__progressbar {
+			padding-right: calc(19.75rem + 7.125 * (100vw - 20rem) / 71.5);
+		}
+	}
+
+	@supports (width: clamp(19.75rem, 17.7395104895rem + 10.0524475524vw, 26.9375rem)) {
+		.top__line {
+			width: clamp(19.75rem, 17.7395104895rem + 10.0524475524vw, 26.9375rem);
+		}
+	}
+
+	@supports not (width: clamp(19.75rem, 17.7395104895rem + 10.0524475524vw, 26.9375rem)) {
+		.top__line {
+			width: calc(19.75rem + 7.1875 * (100vw - 20rem) / 71.5);
+		}
+	}
+}
