@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241016174205">
+	<link rel="stylesheet" href="css/style.css">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -15,496 +15,246 @@
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
-				<a href="#" class="header__logo"><img src="img/logo.svg" alt="logo"></a>
-				<div class="header__menu menu">
-					<nav class="menu__body">
-						<ul class="menu__list">
-							<li class="menu__item"><a href="" class="menu__link _active">Home</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Destinations</a></li>
-							<li class="menu__item"><a href="" class="menu__link">About</a></li>
-							<li class="menu__item"><a href="" class="menu__link">Partner</a></li>
-						</ul>
-					</nav>
-				</div>
-				<div class="header__actions">
-					<button type="button" class="header__button button button--border">Login</button>
-					<button type="button" data-da=".menu__body, 767.98" class="header__button button">Register</button>
-					<button type="button" class=" icon-menu"><span></span></button>
-				</div>
+				<a href="#" class="header__logo">
+					<img src="img/logo.svg" alt="Logo">
+				</a>
 			</div>
 		</header>
 		<main class="page">
-			<section data-watch data-watch-threshold="0.3" class="page__inner inner">
-				<div data-prlx-parent class="inner__container">
-					<div class="inner__info-block block-info">
-						<div class="block-info__content">
-							<h1 class="block-info__title">Explore and Travel</h1>
-							<div class="block-info__options options-info">
-								<h3 class="options-info__title">Holiday finder</h3>
-								<form action="#" class="options-info__form form-info">
-									<div data-one-select class="form-info__preferences">
-										<select name="Location" id="1" class="form-info__select" data-class-modif="control">
-											<option value="Location" class="form-info__option">Location</option>
-											<option value="Germany" class="form-info__option">Germany</option>
-											<option value="Spain" class="form-info__option">Spain</option>
-										</select>
-										<select name="Activity" id="2" class="form-info__select">
-											<option value="Activity" class="form-info__option">Activity</option>
-											<option value="Germany" class="form-info__option">Germany</option>
-											<option value="Spain" class="form-info__option">Spain</option>
-										</select>
-										<select name="Grade" id="2" class="form-info__select">
-											<option value="Grade" class="form-info__option">Grade</option>
-											<option value="Germany" class="form-info__option">Germany</option>
-											<option value="Spain" class="form-info__option">Spain</option>
-										</select>
-										<select name="Date" id="4" class="form-info__select">
-											<option value="Date" class="form-info__option">Date</option>
-											<option value="Germany" class="form-info__option">Germany</option>
-											<option value="Spain" class="form-info__option">Spain</option>
-										</select>
-									</div>
-									<button class="form-info__button button">Explore</button>
-								</form>
-							</div>
-						</div>
-						<div class="block-info__image">
-							<img src="img/inner/bg-img.svg" alt="bg-img">
-						</div>
+			<section class="page__top top">
+				<div class="top__container">
+					<div class="top__line"></div>
+				</div>
+
+			</section>
+			<section class="page__main main-block active">
+				<div class="main-block__container">
+					<div class="main-block__img">
+						<img src="img/story_sub 1.png" alt="Book">
 					</div>
-					<div data-coefficient="80" data-direction="1" data-prlx class="inner__icons icons-inner">
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-inner__item icons-inner__item_1">
-							<img src="img/inner/icons/01.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-inner__item icons-inner__item_2">
-							<img src="img/inner/icons/02.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-inner__item icons-inner__item_3">
-							<img src="img/inner/icons/03.svg" alt="icons">
-						</div>
+					<h1 class="main-block__title">Livre Memora</h1>
+					<div class="main-block__total">Total:
+						<span class="main-block__cost">€99</span>
+					</div>
+					<form action="#" class="main-block__form form-block">
+						<input type="text" placeholder="Code-Promo" class="form-block__input input input--code">
+						<a href="#" class="form-block__apply">Appliquer</a>
+					</form>
+					<div class="main-block__text-block text-block">
+						<h3 class="text-block__title">INCLUS:</h3>
+						<ul class="text-block__list">
+							<li class="text-block__item">Pendant 1 an, chaque semaine vous recevrez des questions qui incitent à raconter des histoires sur votre vie.</li>
+							<li class="text-block__item">1 livre relié avec toutes vos histoires a l'intérieur.</li>
+						</ul>
+					</div>
+					<button class="main-block__button button" onclick="next()">Continuer</button>
+				</div>
+			</section>
+			<section class="page__story-type story-type ">
+				<div class="story-type__container">
+					<div class="story-type__form form form--select">
+						<label for="storyType" class="form--select__title">Qui sera au cœur de cette histoire ?</label>
+						<button class="form--select__select" data-value="self" onclick="selectOption(this)">C'est l'histoire de ma vie</button>
+						<button class="form--select__select" data-value="other" onclick="selectOption(this)">C'est l'histoire de la vie d'un proche</button>
+						<button onclick="continueProcess()" class="form--select__button button">Continuer</button>
 					</div>
 				</div>
 			</section>
-			<section data-watch data-watch-threshold="0.3" class="page__explore explore">
-				<div data-prlx-parent class="explore__container">
-					<div class="explore__block-info  block-info">
-						<div class="block-info__image">
-							<img src="img/explore/bg-img.svg" alt="bg-img">
-						</div>
-						<div class="block-info__content">
-							<h2 class="block-info__title">A new way to explore the world </h2>
-							<div class="block-info__text">
+			<section class="page__send-to send-to">
+				<div class="send-to__container">
+					<div class="send-to__form form form--select">
+						<h2 class="form--select__title">Nous enverrons chaque semaine des questions sur leur vie par email, auxquelles ils pourront répondre. Nous pouvons R les leur envoyer directement, soit vous les envoyer afin que vous puissiez leur poser les questions.</h2>
+						<button class="form--select__select" data-value="them" onclick="selectOption(this)">Envoyez-les directement à eux</button>
+						<button class="form--select__select" data-value="me" onclick="selectOption(this)">Envoyez-les à moi pour que je leur pose les questions</button>
+						<button onclick="continueProcess()" class="form--select__button button">Continuer</button>
+					</div>
+				</div>
+			</section>
+			<section class="page__info info--email ">
+				<div class="info__container">
+					<h2 class="info__title">Leurs informations</h2>
+					<form action="#" class="info__form form form--info">
+						<label for="surname" class="form--info__title">Prénom</label>
+						<input class="form--info__input" type="text" name="surname" placeholder="Prénom">
+
+						<label for="name" class="form--info__title">Nom</label>
+						<input class="form--info__input" type="text" name="name" placeholder="Nom">
+
+						<label for="email" class="form--info__title">Addresse mail</label>
+						<input class="form--info__input" type="email" name="email" placeholder="Addresse mail">
+
+						<button class="form--info__button button" onclick="recall()">Continuer</button>
+					</form>
+				</div>
+			</section>
+			<section class="page__info info">
+				<div class="info__container">
+					<h2 class="info__title">Leurs informations</h2>
+					<form action="#" method="post" class="info__form form form--info">
+						<label for="surname" class="form--info__title">Prénom</label>
+						<input class="form--info__input" type="text" name="surname" placeholder="Prénom">
+
+						<label for="name" class="form--info__title">Nom</label>
+						<input class="form--info__input" type="text" name="name" placeholder="Nom">
+
+						<button class="form--info__button button" onclick="next()">Continuer</button>
+					</form>
+				</div>
+			</section>
+			<section class="page__details details ">
+				<div class="details__container">
+					<h2 class="details__title title">Details du cadeau</h2>
+					<form action="#" class="details__form form form--info">
+						<label for="date" class="form--info__title">Date d'envoi de la premiere question par email</label>
+						<input type="date" class="form--info__input" placeholder="Sélectionnez la date">
+						<!-- <div class="calendar" id="calendar">
+    						  <div class="calendar-header">
+    						   	 <button id="prev-month">&laquo;</button>
+    						   	 <span id="current-month"></span>
+    						  	  <button id="next-month">&raquo;</button>
+    						  	</div>
+    						  	<div class="calendar-body">
+    						  	 	<div class="days-of-week">
+    						   		<span>l</span><span>ma</span><span>me</span><span>j</span><span>v</span><span>s</span><span>d</span>
+    						   	</div>
+    						   	 <div class="days" id="days"></div>
+    						  	</div>
+    							</div>
+  							</div> -->
+						<label for="name" class="form--info__title">De la part de</label>
+						<input class="form--info__input" type="text" name="name" placeholder="Votre prénom + les autres personnes offrant le cadeau">
+
+						<label for="name" class="form--info__title">Votre message</label>
+						<textarea style="min-height: 150px;" class="form--info__input" type="text" name="name" data-value="">Je t'offre un abonnement à Memora, pour que tu puisses écrire et partager tes histoires avec moi et la famille.</textarea>
+
+
+
+						<button class="form--info__button button" onclick="next()">Continuer</button>
+					</form>
+				</div>
+			</section>
+			<section class="page__payment payment">
+				<div class="payment__block">
+					<form action="#" class="payment__form form">
+						<h2 class="form__title">Finaliser votre achat</h2>
+						<div class="form__items">
+							<div class="form__item item-form">
+								<label for="number" class="item-form__label">Nombres de livres</label>
+								<select name="number" id="01" class="item-form__select">
+									<option value="1" class="item-form__option">1 (inclus)</option>
+									<option value="2" class="item-form__option">2 (inclus)</option>
+									<option value="3" class="item-form__option">3 (inclus)</option>
+									<option value="4" class="item-form__option">4 (inclus)</option>
+								</select>
+							</div>
+							<div class="form__block">
+								<div class="form__item item-form">
+									<label for="surname" class="item-form__label">Votre Prénom</label>
+									<input type="text" class="item-form__input" placeholder="Prénom">
+								</div>
+								<div class="form__item item-form">
+									<label for="name" class="item-form__label">Votre Nom</label>
+									<input type="text" class="item-form__input" placeholder="Nom">
+								</div>
+							</div>
+							<div class="form__item item-form">
+								<label for="email" class="item-form__label">Votre address mail</label>
+								<input type="email" class="item-form__input item-form__input--email" placeholder="exemple@exemple.fr">
+							</div>
+							<div class="form__item item-form item-form--checkbox">
+								<input type="checkbox" class="item-form__checkbox">
+								<div class="item-form__text">J'aimerais recevoir des conseils d'écriture de récits, de l'inspiration, et des promotions par e-mail.</div>
+							</div>
+							<div class="form__text">
 								<p>
-									For decades travellers have reached for Lonely Planet books when looking to plan and execute their perfect
-									trip, but now, they can also let Lonely Planet Experiences lead the way
+									Nous accordons une grande importance à la confidentialité. En achetant, vous acceptez avoir lu et accepté nos<span> conditions d'utilisation</span> et notre <span>politique de confidentialité</span>.
 								</p>
 							</div>
-							<button class="block-info__button button">Learn more</button>
 						</div>
-					</div>
-					<div data-coefficient="80" data-direction="1" data-prlx class="explore__icons icons-explore">
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-explore__item icons-explore__item_1">
-							<img src="img/explore/icons/01.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-explore__item icons-explore__item_2">
-							<img src="img/explore/icons/02.svg" alt="icons">
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch data-watch-threshold="0.3" class="page__destinations destinations">
-				<div data-prlx-parent class="destinations__container">
-					<div class="destinations__top top">
-						<h2 class="top__title">Featured destinations</h2>
-						<a href="#" class="top__link">View all <img src="img/destinations/icons/arrow.svg" alt="arrow"></a>
-					</div>
-					<div class="destinations__content">
-						<div class="destinations__cards">
-							<article class="destinations__card card-destinations">
-								<div class="card-destinations__img">
-									<picture><source srcset="img/destinations/01.webp" type="image/webp"><img src="img/destinations/01.jpg" alt="Raja Ampat"></picture>
-								</div>
-								<div class="card-destinations__info">
-									<div class="card-destinations__place">Raja Ampat</div>
-									<div class="card-destinations__country">Indonesia</div>
-								</div>
-							</article>
-							<article class="destinations__card card-destinations">
-								<div class="card-destinations__img">
-									<picture><source srcset="img/destinations/02.webp" type="image/webp"><img src="img/destinations/02.jpg" alt="Raja Ampat"></picture>
-								</div>
-								<div class="card-destinations__info">
-									<div class="card-destinations__place">Fanjingshan</div>
-									<div class="card-destinations__country">China</div>
-								</div>
-							</article>
-							<article class="destinations__card card-destinations">
-								<div class="card-destinations__img">
-									<picture><source srcset="img/destinations/03.webp" type="image/webp"><img src="img/destinations/03.jpg" alt="Vevey"></picture>
-								</div>
-								<div class="card-destinations__info">
-									<div class="card-destinations__place">Vevey</div>
-									<div class="card-destinations__country">Switzerland</div>
-								</div>
-							</article>
-							<article class="destinations__card card-destinations">
-								<div class="card-destinations__img">
-									<picture><source srcset="img/destinations/04.webp" type="image/webp"><img src="img/destinations/04.jpg" alt="Skadar"></picture>
-								</div>
-								<div class="card-destinations__info">
-									<div class="card-destinations__place">Skadar</div>
-									<div class="card-destinations__country">Montenegro</div>
-								</div>
-							</article>
-						</div>
-					</div>
-					<div data-coefficient="80" data-direction="1" data-prlx class="destinations__icons icons-destinations">
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-destinations__item icons-destinations__item_1">
-							<img src="img/explore/icons/01.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-destinations__item icons-destinations__item_2">
-							<img src="img/explore/icons/02.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-destinations__item icons-destinations__item_3">
-							<img src="img/explore/icons/02.svg" alt="icons">
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch data-watch-threshold="0.3" class="page__guides guides">
-				<div data-prlx-parent class="guides__container">
-					<div class="guides__block-info  block-info">
-						<div class="block-info__content">
-							<h2 class="block-info__title">Guides by Thousand Sunny</h2>
-							<div class="block-info__text">
-								<p>
-									Packed with tips and advice from our on-the-ground
-									experts, our city guides app (iOS and Android) is the
-									ultimate resource before and during a trip.
-								</p>
-							</div>
-							<button class="block-info__button button">Download</button>
-						</div>
-						<div class="block-info__image">
-							<img src="img/guides/bg-img.svg" alt="bg-img">
-						</div>
-					</div>
-					<div data-coefficient="80" data-direction="1" data-prlx class="guides__icons icons-guides">
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-guides__item icons-guides__item_1">
-							<img src="img/explore/icons/01.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-guides__item icons-guides__item_2">
-							<img src="img/guides/icons/01.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-guides__item icons-guides__item_3">
-							<img src="img/explore/icons/02.svg" alt="icons">
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch data-watch-threshold="0.3" class="page__reviews reviews">
-				<div data-prlx-parent class="reviews__container">
-					<div data-coefficient="80" data-direction="1" data-prlx class="reviews__icons icons-reviews">
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-reviews__item icons-reviews__item_1">
-							<img src="img/explore/icons/02.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-reviews__item icons-reviews__item_2">
-							<img src="img/reviews/icons/04.svg" alt="icons">
-						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-reviews__item icons-reviews__item_3">
-							<img src="img/reviews/icons/02.svg" alt="icons">
-						</div>
-					</div>
-					<div class="reviews__top top">
-						<h2 class="top__title">Testimonials</h2>
-					</div>
-					<!-- Оболонка слайдера -->
-					<div class="reviews__slider swiper">
-						<div class="reviews__actions">
-							<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
-							<button type="button" class="swiper-button-prev"></button>
-							<button type="button" class="swiper-button-next"></button>
-						</div>
-						<!-- Частина слайдера, що рухається -->
-						<div class="reviews__wrapper swiper-wrapper">
-							<!-- Слайд -->
-							<div class="reviews__slide swiper-slide">
-								<div class="reviews__comment comment-reviews">
-									<div data-swiper-parallax="-100" class="comment-reviews__rating rating rating_set">
-										<div class="rating__body">
-											<div class="rating__active"></div>
-											<div class="rating__items">
-												<input type="radio" class="rating__item" value="1" name="rating">
-												<input type="radio" class="rating__item" value="2" name="rating">
-												<input type="radio" class="rating__item" value="3" name="rating">
-												<input type="radio" class="rating__item" value="4" name="rating">
-												<input type="radio" class="rating__item" value="5" name="rating">
-											</div>
-										</div>
-										<div class="rating__value">5</div>
-									</div>
-									<div data-swiper-parallax="-150" class="comment-reviews__text">
-										“Quisque in lacus a urna fermentum euismod. Integer mi nibh,
-										dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec”
-									</div>
-									<div data-swiper-parallax="-200" class="comment-reviews__info">
-										<div class="comment-reviews__name">
-											Edward Newgate
-										</div>
-										<div class="comment-reviews__position">Founder Circle</div>
-									</div>
-								</div>
-								<div data-swiper-parallax="-250" class="reviews__image">
-									<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.jpg" alt="Image"></picture>
-								</div>
-							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="reviews__comment comment-reviews">
-									<div data-swiper-parallax="-100" class="comment-reviews__rating rating rating_set">
-										<div class="rating__body">
-											<div class="rating__active"></div>
-											<div class="rating__items">
-												<input type="radio" class="rating__item" value="1" name="rating">
-												<input type="radio" class="rating__item" value="2" name="rating">
-												<input type="radio" class="rating__item" value="3" name="rating">
-												<input type="radio" class="rating__item" value="4" name="rating">
-												<input type="radio" class="rating__item" value="5" name="rating">
-											</div>
-										</div>
-										<div class="rating__value">5</div>
-									</div>
-									<div data-swiper-parallax="-150" class="comment-reviews__text">
-										“Quisque in lacus a urna fermentum euismod. Integer mi nibh,
-										dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec”
-									</div>
-									<div data-swiper-parallax="-200" class="comment-reviews__info">
-										<div class="comment-reviews__name">
-											Edward Newgate
-										</div>
-										<div class="comment-reviews__position">Founder Circle</div>
-									</div>
-								</div>
-								<div data-swiper-parallax="-250" class="reviews__image">
-									<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.jpg" alt="Image"></picture>
-								</div>
-							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="reviews__comment comment-reviews">
-									<div data-swiper-parallax="-100" class="comment-reviews__rating rating rating_set">
-										<div class="rating__body">
-											<div class="rating__active"></div>
-											<div class="rating__items">
-												<input type="radio" class="rating__item" value="1" name="rating">
-												<input type="radio" class="rating__item" value="2" name="rating">
-												<input type="radio" class="rating__item" value="3" name="rating">
-												<input type="radio" class="rating__item" value="4" name="rating">
-												<input type="radio" class="rating__item" value="5" name="rating">
-											</div>
-										</div>
-										<div class="rating__value">5</div>
-									</div>
-									<div data-swiper-parallax="-150" class="comment-reviews__text">
-										“Quisque in lacus a urna fermentum euismod. Integer mi nibh,
-										dapibus ac scelerisque eu, facilisis quis purus. Morbi blandit sit amet turpis nec”
-									</div>
-									<div data-swiper-parallax="-200" class="comment-reviews__info">
-										<div class="comment-reviews__name">
-											Edward Newgate
-										</div>
-										<div class="comment-reviews__position">Founder Circle</div>
-									</div>
-								</div>
-								<div data-swiper-parallax="-250" class="reviews__image">
-									<picture><source srcset="img/reviews/01.webp" type="image/webp"><img src="img/reviews/01.jpg" alt="Image"></picture>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<section data-watch data-watch-threshold="0.3" class="page__stories stories">
-				<div data-prlx-parent class="stories__container">
-					<div class="stories__top top">
-						<h2 class="top__title">Trending stories</h2>
-						<a href="#" class="top__link">View all <img src="img/destinations/icons/arrow.svg" alt="arrow"></a>
-					</div>
-					<div class="stories__content">
-						<div class="stories__cards">
-							<article class="stories__card card-stories">
-								<div class="card-stories__image">
-									<picture><source srcset="img/stories/01.webp" type="image/webp"><img src="img/stories/01.jpg" alt="image"></picture>
-								</div>
-								<div class="card-stories__body">
-									<h4 class="card-stories__title">The many benefits of taking a healing holiday</h4>
-									<div class="card-stories__text">
-										‘Helaing holidays’ are on the rise
-										tohelp maximise your health and happines...
-									</div>
+					</form>
+					<!-- <div class="payment-section">
+            			<div class="payment-method">
+               			<button class="method-btn active" id="card-btn">Card</button>
+                			<button class="method-btn" id="gpay-btn">Google Pay</button>
+                			<button class="method-btn" id="afterpay-btn">Afterpay</button>
+                			<button class="method-btn" id="klarna-btn">Klarna</butto>
+         				</div> -->
 
-									<button class="card-stories__read-more">Read more</button>
-								</div>
-							</article>
-							<article class="stories__card card-stories">
-								<div class="card-stories__image">
-									<picture><source srcset="img/stories/02.webp" type="image/webp"><img src="img/stories/02.jpg" alt="image"></picture>
-								</div>
-								<div class="card-stories__body">
-									<h4 class="card-stories__title">The many benefits of taking a healing holiday</h4>
-									<div class="card-stories__text">
-										‘Helaing holidays’ are on the rise
-										tohelp maximise your health and happines...
-									</div>
-
-									<button class="card-stories__read-more">Read more</button>
-								</div>
-							</article>
-							<article class="stories__card card-stories">
-								<div class="card-stories__image">
-									<picture><source srcset="img/stories/03.webp" type="image/webp"><img src="img/stories/03.jpg" alt="image"></picture>
-								</div>
-								<div class="card-stories__body">
-									<h4 class="card-stories__title">The many benefits of taking a healing holiday</h4>
-									<div class="card-stories__text">
-										‘Helaing holidays’ are on the rise
-										tohelp maximise your health and happines...
-									</div>
-
-									<button class="card-stories__read-more">Read more</button>
-								</div>
-							</article>
-							<article class="stories__card card-stories">
-								<div class="card-stories__image">
-									<picture><source srcset="img/stories/04.webp" type="image/webp"><img src="img/stories/04.jpg" alt="image"></picture>
-								</div>
-								<div class="card-stories__body">
-									<h4 class="card-stories__title">The many benefits of taking a healing holiday</h4>
-									<div class="card-stories__text">
-										‘Helaing holidays’ are on the rise
-										tohelp maximise your health and happines...
-									</div>
-
-									<button class="card-stories__read-more">Read more</button>
-								</div>
-							</article>
+					<!-- Payment Card Form -->
+					<!-- <form id="payment-card-form">
+            		    <div class="input-group">
+            		        <label for="card-number">Card number</label>
+            		        <input type="text" id="card-number" placeholder="1234 1234 1234 1234" maxlength="19">
+            		        <div class="card-logos">
+            		            <picture><source srcset="visa-logo.webp" type="image/webp"><img src="visa-logo.png" alt="Visa"></picture>
+            		            <picture><source srcset="mastercard-logo.webp" type="image/webp"><img src="mastercard-logo.png" alt="MasterCard"></picture>
+            		            <picture><source srcset="amex-logo.webp" type="image/webp"><img src="amex-logo.png" alt="Amex"></picture>
+            		            <picture><source srcset="discover-logo.webp" type="image/webp"><img src="discover-logo.png" alt="Discover"></picture>
+            		        </div>
+            		    </div>
+						 
+            		    <div class="input-row">
+            		        <div class="input-group">
+            		            <label for="exp-date">Expiration date</label>
+            		            <input type="text" id="exp-date" placeholder="MM / YY">
+            		        </div>
+            		        <div class="input-group">
+            		            <label for="cvc">Security code</label>
+            		            <input type="text" id="cvc" placeholder="CVC">
+            		        </div>
+            		    </div>
+						 
+            		    <div class="input-row">
+            		        <div class="input-group">
+            		            <label for="country">Country</label>
+            		            <select id="country">
+            		                <option value="US">United States</option>
+            		                <option value="CA">Canada</option> -->
+					<!-- Add more options as needed -->
+					<!-- </select>
+            		        </div>
+            		        <div class="input-group">
+            		            <label for="zip-code">Zip code</label>
+            		            <input type="text" id="zip-code" placeholder="12345">
+            		        </div>
+            		    </div>
+						 
+            		    <button type="submit" class="submit-btn">Submit Payment</button>
+            			</form>
+        				</div> -->
+				</div>
+				<div class="payment__code">
+					<div class="payment__info">
+						<div class="main-block__img">
+							<img src="img/story_sub 1.png" alt="Book">
 						</div>
-					</div>
-					<div data-coefficient="80" data-direction="1" data-prlx class="stories__icons icons-stories">
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-stories__item icons-stories__item_1">
-							<img src="img/inner/icons/03.svg" alt="icons">
+						<h1 class="main-block__title">Livre Memora</h1>
+						<div class="main-block__total">Total:
+							<span class="main-block__cost">€99</span>
 						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-stories__item icons-stories__item_2">
-							<img src="img/inner/icons/02.svg" alt="icons">
+						<div class="main-block__text-block text-block">
+							<h3 class="text-block__title">INCLUS:</h3>
+							<ul class="text-block__list">
+								<li class="text-block__item">Pendant 1 an, chaque semaine vous recevrez des questions qui incitent à raconter des histoires sur votre vie.</li>
+								<li class="text-block__item">1 livre relié avec toutes vos histoires a l'intérieur.</li>
+							</ul>
 						</div>
-						<div data-prlx-mouse data-prlx-cx="20" data-prlx-cy="20" class="icons-stories__item icons-stories__item_3">
-							<img src="img/inner/icons/03.svg" alt="icons">
-						</div>
+						<form action="#" class="main-block__form form-block">
+							<input type="text" placeholder="Code-Promo" class="form-block__input input input--code">
+							<a href="#" class="form-block__apply">Appliquer</a>
+						</form>
 					</div>
 				</div>
+
 			</section>
+			
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__body">
-					<div class="footer__info info-footer">
-						<a href="#" class="info-footer__logo"><img src="img/logo.svg" alt="Logo"></a>
-						<div class="info-footer__text">
-							Plan and book your perfect trip with expert advice, travel tips destination information from us
-						</div>
-						<div class="info-footer__copy">©2020 Thousand Sunny. All rights reserved</div>
-					</div>
-					<div class="footer__menu menu-footer">
-						<div data-spollers="571.98" class="menu-footer__spollers spollers">
-							<details class="spollers__item">
-								<summary class="spollers__title">Destinations</summary>
-								<div class="spollers__body">
-									<ul class="spollers__list">
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Africa</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Antarctica</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Asia</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Europe</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">America</a>
-										</li>
-									</ul>
-								</div>
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Shop</summary>
-								<div class="spollers__body">
-									<ul class="spollers__list">
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Destination Guides</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Pictorial & Gifts</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Special Offers</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Delivery Times</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">FAQs</a>
-										</li>
-									</ul>
-								</div>
-
-							</details>
-							<details class="spollers__item">
-								<summary class="spollers__title">Interests</summary>
-								<div class="spollers__body">
-									<ul class="spollers__list">
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Adventure Travel</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Art And Culture</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Wild life And Nature</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Family Holidays</a>
-										</li>
-										<li class="spollers__item">
-											<a href="#" class="spollers__link">Food And Drink</a>
-										</li>
-									</ul>
-								</div>
-							</details>
-						</div>
-					</div>
-				</div>
-				<div class="footer__social social-footer">
-					<a href="#" class="social-footer__link">
-						<img src="img/footer/social/twitter.svg" alt="twitter">
-					</a>
-					<a href="#" class="social-footer__link">
-						<img src="img/footer/social/facebook.svg" alt="facebook">
-					</a>
-					<a href="#" class="social-footer__link">
-						<img src="img/footer/social/instagram.svg" alt="instagram">
-					</a>
-					<a href="#" class="social-footer__link">
-						<img src="img/footer/social/linkedIn.svg" alt="linkedIn">
-					</a>
-					<a href="#" class="social-footer__link">
-						<img src="img/footer/social/youtube.svg" alt="youtube">
-					</a>
-				</div>
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241016174205"></script>
+	<script src="js/app.js"></script>
 </body>
 
 </html>
