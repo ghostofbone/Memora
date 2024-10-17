@@ -1129,3 +1129,34 @@ h6 {
 		border-color: rgba(40, 62, 46, 0.49);
 	}
 }
+/* ======================================================================================================================================================== */
+
+.top__container {
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.top__progressbar {
+	position: relative;
+	max-width: 431px;
+	padding-bottom: 50px;
+	padding-right: 431px;
+}
+.top__line {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 431px;
+	border-radius: 8px;
+	height: 16px;
+	background-color: #d9d9d9;
+}
+.top__loading {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20%;
+	border-radius: 8px;
+	height: 16px;
+	background-color: #367243;
+}
